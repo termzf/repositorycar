@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Second_hand_car.iml" filepath="$PROJECT_DIR$/Second_hand_car.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_car_dao/ssm_car_dao.iml" filepath="$PROJECT_DIR$/ssm_car_dao/ssm_car_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_car_domain/ssm_car_domain.iml" filepath="$PROJECT_DIR$/ssm_car_domain/ssm_car_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_car_service/ssm_car_service.iml" filepath="$PROJECT_DIR$/ssm_car_service/ssm_car_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_car_utils/ssm_car_utils.iml" filepath="$PROJECT_DIR$/ssm_car_utils/ssm_car_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_car_web/ssm_car_web.iml" filepath="$PROJECT_DIR$/ssm_car_web/ssm_car_web.iml" />
+    </modules>
+  </component>
+</project>
