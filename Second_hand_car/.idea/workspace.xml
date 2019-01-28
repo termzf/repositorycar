@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ad7ddbb-170e-4053-9337-b77b91ca87d3" name="Default" comment="添加二手车工程">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1ad7ddbb-170e-4053-9337-b77b91ca87d3" name="Default" comment="添加二手车工程" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/ssm_car_dao/target/" />
@@ -40,6 +38,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sql记录日志文件" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm_car_dao/src/main/resources/sql记录日志文件">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Car.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm_car_domain/src/main/java/cn/conquer/domain/Car.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
@@ -180,6 +188,11 @@
             <path>
               <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
               <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
               <item name="ssm_car_dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,6 +271,31 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="conquer" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_car_domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_car_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_car_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Second_hand_car" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_car_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Second_hand_car" type="b2602c69:ProjectViewProjectNode" />
@@ -429,12 +467,12 @@
       <workItem from="1548473665312" duration="30000" />
       <workItem from="1548586624221" duration="4999000" />
       <workItem from="1548636444879" duration="4017000" />
-      <workItem from="1548658494993" duration="127000" />
+      <workItem from="1548658494993" duration="493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10079000" />
+    <option name="totallyTimeSpent" value="10445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
@@ -577,6 +615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,14 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssm_car_web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -786,6 +817,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
