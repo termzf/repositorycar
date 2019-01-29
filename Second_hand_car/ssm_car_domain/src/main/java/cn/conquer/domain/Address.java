@@ -8,75 +8,63 @@ import java.io.Serializable;
 public class Address implements Serializable {
 
     //地区id
-    private int aid;
-    //地区编号
-    private int number;
-    //父地区编号
-    private int parent_number;
+    private int id;
     //地区名
-    private String address_name;
-    //首字母拼音
-    private String initial;
+    private String name;
+    //父地区id
+    private int parent_id;
+    //地区级别，省市区/1,2,3
+    private int level;
 
     public Address() {
     }
 
-    public Address(int aid, int number, int parent_number, String address_name, String initial) {
-        this.aid = aid;
-        this.number = number;
-        this.parent_number = parent_number;
-        this.address_name = address_name;
-        this.initial = initial;
+    public Address(int id, String name, int parent_id, int level) {
+        this.id = id;
+        this.name = name;
+        this.parent_id = parent_id;
+        this.level = level;
     }
 
     @Override
     public String toString() {
         return "Address{" +
-                "aid=" + aid +
-                ", number=" + number +
-                ", parent_number=" + parent_number +
-                ", address_name='" + address_name + '\'' +
-                ", initial='" + initial + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", parent_id=" + parent_id +
+                ", level=" + level +
                 '}';
     }
 
-    public int getAid() {
-        return aid;
+    public int getId() {
+        return id;
     }
 
-    public void setAid(int aid) {
-        this.aid = aid;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getNumber() {
-        return number;
+    public String getName() {
+        return name;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getParent_number() {
-        return parent_number;
+    public int getParent_id() {
+        return parent_id;
     }
 
-    public void setParent_number(int parent_number) {
-        this.parent_number = parent_number;
+    public void setParent_id(int parent_id) {
+        this.parent_id = parent_id;
     }
 
-    public String getAddress_name() {
-        return address_name;
+    public int getLevel() {
+        return level;
     }
 
-    public void setAddress_name(String address_name) {
-        this.address_name = address_name;
-    }
-
-    public String getInitial() {
-        return initial;
-    }
-
-    public void setInitial(String initial) {
-        this.initial = initial;
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

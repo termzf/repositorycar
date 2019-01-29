@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     //用户id
-    private int uid;
+    private int id;
     //用户名
     private String username;
     //用户密码
@@ -25,8 +25,8 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(int uid, String username, String password, String name, String address, String tel, String email) {
-        this.uid = uid;
+    public User(int id, String username, String password, String name, String address, String tel, String email) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.name = name;
@@ -38,7 +38,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "uid=" + uid +
+                "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
@@ -48,12 +48,12 @@ public class User implements Serializable {
                 '}';
     }
 
-    public int getUid() {
-        return uid;
+    public int getId() {
+        return id;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {

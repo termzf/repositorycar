@@ -9,7 +9,7 @@ import java.util.Date;
 public class Car implements Serializable {
 
     //车的id
-    private int cid;
+    private int id;
     //车的颜色
     private String color;
     //车的品牌
@@ -28,22 +28,25 @@ public class Car implements Serializable {
     private int seating;
     //行驶里程
     private int travel_distance;
-    //座位数
+    //排量
     private int displacement;
     //牌照地址
     private String license_address;
     //上门时间
     private Date door_time;
+    //外键，与用户表外联
+    private int uid;
 
     public Car() {
     }
 
-    public Car(int cid, String color, String brand,
+    public Car(int id, String color, String brand,
                String car_series, String type,
                String emission_standards, String fuel_type,
-               String driving_type, int seating, int travel_distance,
-               int displacement, String license_address, Date door_time) {
-        this.cid = cid;
+               String driving_type, int seating,
+               int travel_distance, int displacement,
+               String license_address, Date door_time, int uid) {
+        this.id = id;
         this.color = color;
         this.brand = brand;
         this.car_series = car_series;
@@ -56,12 +59,13 @@ public class Car implements Serializable {
         this.displacement = displacement;
         this.license_address = license_address;
         this.door_time = door_time;
+        this.uid = uid;
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "cid=" + cid +
+                "id=" + id +
                 ", color='" + color + '\'' +
                 ", brand='" + brand + '\'' +
                 ", car_series='" + car_series + '\'' +
@@ -74,15 +78,24 @@ public class Car implements Serializable {
                 ", displacement=" + displacement +
                 ", license_address='" + license_address + '\'' +
                 ", door_time=" + door_time +
+                ", uid=" + uid +
                 '}';
     }
 
-    public int getCid() {
-        return cid;
+    public int getUid() {
+        return uid;
     }
 
-    public void setCid(int cid) {
-        this.cid = cid;
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getColor() {

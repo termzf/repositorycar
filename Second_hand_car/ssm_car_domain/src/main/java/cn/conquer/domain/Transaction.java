@@ -9,50 +9,62 @@ import java.util.Date;
 public class Transaction implements Serializable {
 
     //交易id
-    private int tid;
+    private int id;
     //交易时间
     private Date transaction_time;
     //交易地址
     private String transaction_address;
     //客户信息，只有姓名，具体信息通过姓名查询用户表
     private String client_massage;
-    //车id
-    private int car_cid;
+    //车id,外键，与卖车表外联
+    private int cid;
     //客户电话
     private String tel;
+    //交易结果
+    private String result;
 
     public Transaction() {
     }
 
-    public Transaction(int tid, Date transaction_time,
+    public Transaction(int id, Date transaction_time,
                        String transaction_address,
-                       String client_massage, int car_cid, String tel) {
-        this.tid = tid;
+                       String client_massage, int cid, String tel, String result) {
+        this.id = id;
         this.transaction_time = transaction_time;
         this.transaction_address = transaction_address;
         this.client_massage = client_massage;
-        this.car_cid = car_cid;
+        this.cid = cid;
         this.tel = tel;
+        this.result = result;
     }
 
     @Override
     public String toString() {
         return "Transaction{" +
-                "tid=" + tid +
+                "id=" + id +
                 ", transaction_time=" + transaction_time +
                 ", transaction_address='" + transaction_address + '\'' +
                 ", client_massage='" + client_massage + '\'' +
-                ", car_cid=" + car_cid +
+                ", cid=" + cid +
                 ", tel='" + tel + '\'' +
+                ", result='" + result + '\'' +
                 '}';
     }
 
-    public int getTid() {
-        return tid;
+    public String getResult() {
+        return result;
     }
 
-    public void setTid(int tid) {
-        this.tid = tid;
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getTransaction_time() {
@@ -79,12 +91,12 @@ public class Transaction implements Serializable {
         this.client_massage = client_massage;
     }
 
-    public int getCar_cid() {
-        return car_cid;
+    public int getCid() {
+        return cid;
     }
 
-    public void setCar_cid(int car_cid) {
-        this.car_cid = car_cid;
+    public void setCid(int cid) {
+        this.cid = cid;
     }
 
     public String getTel() {

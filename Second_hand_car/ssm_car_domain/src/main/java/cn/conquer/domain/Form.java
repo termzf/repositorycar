@@ -9,7 +9,7 @@ import java.util.Date;
 public class Form implements Serializable {
 
     //订单id
-    private int fid;
+    private int id;
     //订单图片
     private String picture;
     //车的描述
@@ -26,22 +26,23 @@ public class Form implements Serializable {
     public Form() {
     }
 
-    public Form(int fid, String picture, String description,
+    public Form(int id, String picture, String description,
                 Date transaction_time, int travel_distance,
                 int speed, int transaction_price) {
-        this.fid = fid;
+        this.id = id;
         this.picture = picture;
         this.description = description;
         this.transaction_time = transaction_time;
         this.travel_distance = travel_distance;
         this.speed = speed;
         this.transaction_price = transaction_price;
+
     }
 
     @Override
     public String toString() {
         return "Form{" +
-                "fid=" + fid +
+                "id=" + id +
                 ", picture='" + picture + '\'' +
                 ", description='" + description + '\'' +
                 ", transaction_time=" + transaction_time +
@@ -51,12 +52,12 @@ public class Form implements Serializable {
                 '}';
     }
 
-    public int getFid() {
-        return fid;
+    public int getId() {
+        return id;
     }
 
-    public void setFid(int fid) {
-        this.fid = fid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPicture() {
