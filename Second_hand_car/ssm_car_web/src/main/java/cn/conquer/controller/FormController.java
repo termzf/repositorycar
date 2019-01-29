@@ -1,4 +1,7 @@
 package cn.conquer.controller;
 
-public interface FormController {
+/**
+ * 订单模块的控制器
+ */
+public class FormController {
 }

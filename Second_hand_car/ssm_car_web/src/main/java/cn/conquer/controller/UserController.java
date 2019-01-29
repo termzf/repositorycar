@@ -1,4 +1,7 @@
 package cn.conquer.controller;
 
-public interface UserController {
+/**
+ * 用户模块的控制器
+ */
+public class UserController {
 }

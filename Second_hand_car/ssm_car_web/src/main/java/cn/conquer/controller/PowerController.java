@@ -1,4 +1,7 @@
 package cn.conquer.controller;
 
-public interface PowerController {
+/**
+ * 权限模块的控制器
+ */
+public class PowerController {
 }

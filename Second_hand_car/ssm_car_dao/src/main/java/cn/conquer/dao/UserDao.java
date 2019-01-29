@@ -1,5 +1,9 @@
 package cn.conquer.dao;
 
+/**
+ * 用户模块的dao层接口
+ */
+
 import org.springframework.security.core.userdetails.User;
 
 public interface UserDao {
