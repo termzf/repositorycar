@@ -3601,4 +3601,4 @@ INSERT INTO `tp_region2` VALUES ('3523', '五家渠市', '379', '3');
 
 
 #修改表名
-ALTER TABLE tp_region2 RENAME TO address;	
+ALTER TABLE tp_region2 RENAME TO address;
