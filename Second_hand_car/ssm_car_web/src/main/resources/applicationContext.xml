@@ -15,9 +15,9 @@
 
 
     <!-- 开启注解扫描，管理service和dao -->
-    <context:component-scan base-package="cn.itheima.service">
+    <context:component-scan base-package="cn.conquer.service">
     </context:component-scan>
-    <context:component-scan base-package="cn.itheima.dao">
+    <context:component-scan base-package="cn.conquer.dao">
     </context:component-scan>
 
     <context:property-placeholder location="classpath:db.properties"/>
