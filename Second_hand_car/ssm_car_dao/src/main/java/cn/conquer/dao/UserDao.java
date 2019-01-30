@@ -6,8 +6,11 @@ package cn.conquer.dao;
 
 import org.springframework.security.core.userdetails.User;
 
+import java.util.List;
+
 public interface UserDao {
 
+    public List<User> findAll();
 
     public User findByUsername(String username);
 
