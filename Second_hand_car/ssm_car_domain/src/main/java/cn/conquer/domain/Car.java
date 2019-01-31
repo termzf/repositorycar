@@ -1,6 +1,7 @@
 package cn.conquer.domain;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -34,6 +35,21 @@ public class Car implements Serializable {
     private String license_address;
     //上门时间
     private Date door_time;
+
+    public String getDoor_time_str() {
+        if(door_time!=null){
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            door_time_str = simpleDateFormat.format(door_time);
+        }
+        return door_time_str;
+    }
+
+    public void setDoor_time_str(String door_time_str) {
+        this.door_time_str = door_time_str;
+    }
+
+    //上门时间str
+    private String door_time_str;
     //外键，与用户表外联
     private int uid;
 
