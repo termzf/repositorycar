@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--产品sql模块(xml),已配置别名 参数 结果都是类名小写-->
+<mapper namespace="com.yzp.dao.ProductDao">
+    <!--查找全部在售车辆-->
+
+    <select id="findAll" resultType="com.yzp.domain.Car">
+        select carNum,brand,color,type,license_address from car
+    </select>
+
+    <!--查看单车的详细信息-->
+    <resultMap id="findOne" type="car" >
+        <id property="id" column="id"></id>
+        <result property="car_series" column="car_series"></result>
+        <result property="emission_standards" column="emission_standards"></result>
+        <result property="fuel_type" column="fuel_type"></result>
+        <result property="driving_type" column="driving_type"></result>
+        <result property="seating" column="seating"></result>
+        <result property="travel_distance" column="travel_distance"></result>
+        <result property="displacement" column="displacement"></result>
+        <result property="door_timeStr" column="door_timeStr"></result>
+        <association property="user" column="id" select="com.yzp.dao.UserDao.findUser_bycid"></association>
+    </resultMap>
+    <select id="findOne" parameterType="String" resultMap="findOne">
+        select * from car where id = #{id}
+    </select>
+
+    <!--修改车的几个基本信息-->
+    <update id="updateCar" parameterType="car">
+        UPDATE car
+        <set>
+            <if test="color ! = null">
+                color = #{color},
+            </if>
+            <if test="brand ! = null">
+                brand = #{brand},
+            </if>
+            <if test="type ! = null">
+                type = #{type},
+            </if>
+            <if test="license_address ! = null">
+                license_address = #{license_address}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--增加车信息-->
+    <insert id="insertCar" parameterType="car">
+        insert into car
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+              carNum,
+              <if test="car_series!=null">
+                  car_series,
+              </if>
+            <if test="door_time!=null">
+                door_time,
+            </if>
+            <if test="emission_standards!=null">
+                emission_standards,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{carNum},
+            <if test="car_series!=null">
+                #{car_series},
+            </if>
+            <if test="door_time!=null">
+                #{door_time},
+            </if>
+            <if test="emission_standards!=null">
+                #{emission_standards},
+            </if>
+            <!--<if test="license_address!=null">-->
+                <!--#{license_address},-->
+            <!--</if>-->
+        </trim>
+
+    </insert>
+</mapper>
