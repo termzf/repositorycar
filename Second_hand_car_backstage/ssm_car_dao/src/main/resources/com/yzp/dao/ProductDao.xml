@@ -5,8 +5,9 @@
 <!--产品sql模块(xml),已配置别名 参数 结果都是类名小写-->
 <mapper namespace="com.yzp.dao.ProductDao">
     <!--查找全部在售车辆-->
-    <select id="findAll" resultType="car">
-        select * from car
+
+    <select id="findAll" resultType="com.yzp.domain.Car">
+        select carNum,brand,color,type,license_address from car
     </select>
 
     <!--查看单车的详细信息-->
@@ -50,35 +51,34 @@
     <insert id="insertCar" parameterType="car">
         insert into car
         <trim prefix="(" suffix=")" suffixOverrides=",">
-              <if test="color!=null">
-                  color,
+              carNum,
+              <if test="car_series!=null">
+                  car_series,
               </if>
-            <if test="brand!=null">
-                brand,
+            <if test="door_time!=null">
+                door_time,
             </if>
-            <if test="type!=null">
-                type,
+            <if test="emission_standards!=null">
+                emission_standards,
             </if>
-            <if test="license_address!=null">
-                license_address,
-            </if>
+
         </trim>
 
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="color!=null">
-                #{color},
+            #{carNum},
+            <if test="car_series!=null">
+                #{car_series},
             </if>
-            <if test="brand!=null">
-                #{brand},
+            <if test="door_time!=null">
+                #{door_time},
             </if>
-            <if test="type!=null">
-                #{type},
+            <if test="emission_standards!=null">
+                #{emission_standards},
             </if>
-            <if test="license_address!=null">
-                #{license_address},
-            </if>
+            <!--<if test="license_address!=null">-->
+                <!--#{license_address},-->
+            <!--</if>-->
         </trim>
-          WHERE id = #{id}
 
     </insert>
 </mapper>

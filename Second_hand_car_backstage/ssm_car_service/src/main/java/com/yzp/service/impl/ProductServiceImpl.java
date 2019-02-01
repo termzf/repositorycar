@@ -22,7 +22,7 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     public List<Car> findAll(int page,int size) {
-        PageHelper.startPage(page,size);
+//        PageHelper.startPage(page,size);
         return productDao.findAll();
     }
 

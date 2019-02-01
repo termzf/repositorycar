@@ -13,6 +13,8 @@ public class Car implements Serializable{
     private int id;
     //根据二手车收录时间来设置二手车编号 年月日-今天录的第几辆车（unique）
     private String carNum;
+    //价格
+    private double price;
     //车的颜色
     private String color;
     //车的品牌
@@ -40,6 +42,24 @@ public class Car implements Serializable{
     private String door_timeStr;
     //卖家信息
     private User user;
+
+    private int rowNum;
+
+    public int getRowNum() {
+        return rowNum;
+    }
+
+    public void setRowNum(int rowNum) {
+        this.rowNum = rowNum;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public User getUser() {
         return user;
@@ -154,6 +174,9 @@ public class Car implements Serializable{
     }
 
     public Date getDoor_time() {
+        if (door_timeStr!=null){
+            door_time=TimeConvert.s2d(door_timeStr);
+        }
         return door_time;
     }
 

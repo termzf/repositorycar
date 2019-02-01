@@ -1,17 +1,21 @@
 package com.yzp.dao;
 
 import com.yzp.domain.Car;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 产品（二手车）模板 用xml文件写sql 请勿添加注解
  */
+@Repository
 public interface ProductDao {
     /**
      * 展示所有二手车信息
      * @return
      */
+//    @Select("select * from car")
     public List<Car> findAll();
 
     /**

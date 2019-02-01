@@ -27,13 +27,14 @@ public class ProductController {
      * @return
      */
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page",required = false,defaultValue = "1") int page,
+    public ModelAndView findAll(@RequestParam(name = "page",required = false,defaultValue = "0") int page,
                                 @RequestParam(name = "size",required = false,defaultValue = "5") int size){
         ModelAndView mv = new ModelAndView();
         List<Car> carList = productService.findAll(page, size);
-        PageInfo<Car> pageInfo = new PageInfo<Car>(carList);
-        mv.addObject("carList",pageInfo);
+//        PageInfo pageInfo = new PageInfo(carList);
+        mv.addObject("carList",carList);
         mv.setViewName("car-list");
+        System.out.println("11111111");
         return mv;
     }
 
@@ -63,8 +64,9 @@ public class ProductController {
     /**
      * 添加详细car信息
      */
+    @RequestMapping("/addOne.do")
     public String insert(Car car){
         productService.insertOne(car);
-        return "redirect:updateOne.do";
+        return "redirect:findAll.do";
     }
 }
